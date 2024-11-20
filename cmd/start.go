@@ -5,6 +5,7 @@ import (
 	"eth-lsd-ejector/task"
 	"fmt"
 	"math"
+	"os"
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/pkg/errors"
@@ -15,6 +16,8 @@ import (
 	"github.com/stafiprotocol/eth2-balance-service/shared/beacon"
 	"github.com/stafiprotocol/eth2-balance-service/shared/types"
 )
+
+const EnvPassword = "KEYSTORE_PASSWORD"
 
 const (
 	flagKeysDir           = "keys_dir"
@@ -93,11 +96,16 @@ func startCmd() *cobra.Command {
 				return fmt.Errorf("no keystore found in directory %s", keysDir)
 			}
 
-			accountsPassword, err := prompt.PasswordPrompt(
-				"Enter the password for your imported accounts", prompt.NotEmpty,
-			)
-			if err != nil {
-				return fmt.Errorf("could not read account password: %w", err)
+			var accountsPassword string
+			if pswdStr := os.Getenv(EnvPassword); pswdStr != "" {
+				accountsPassword = pswdStr
+			} else {
+				accountsPassword, err = prompt.PasswordPrompt(
+					"Enter the password for your imported accounts", prompt.NotEmpty,
+				)
+				if err != nil {
+					return fmt.Errorf("could not read account password: %w", err)
+				}
 			}
 
 			connection, err := shared.NewConnection(executionEndpoint, consensusEndpoint, nil, nil, nil)
