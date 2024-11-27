@@ -211,7 +211,13 @@ func (task *Task) checkCycle(cycle int64) error {
 			// will sign and broadcast exit msg
 			exit := &ethpb.VoluntaryExit{Epoch: currentEpoch, ValidatorIndex: types.ValidatorIndex(validator.ValidatorIndex)}
 
-			domain, err := task.connection.Eth2Client().GetDomainData(domainVoluntaryExit[:], uint64(exit.Epoch))
+			// Use Cappella fork as here - https://github.com/stratisproject/prysm-stratis/blob/develop/beacon-chain/core/blocks/exit.go#L122
+			fork := &ethpb.Fork{
+				PreviousVersion: task.eth2Config.CapellaForkVersion,
+				CurrentVersion:  task.eth2Config.CapellaForkVersion,
+				Epoch:           types.Epoch(task.eth2Config.CapellaForkEpoch),
+			}
+			domain, err := signing.Domain(fork, exit.Epoch, domainVoluntaryExit, task.eth2Config.GenesisValidatorsRoot)
 			if err != nil {
 				return errors.Wrap(err, "Get domainData failed")
 			}
