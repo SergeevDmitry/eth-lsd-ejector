@@ -7,12 +7,12 @@ import (
 
 	withdraw "eth-lsd-ejector/bindings/Withdraw"
 
+	"github.com/SergeevDmitry/eth2-balance-service/shared"
+	"github.com/SergeevDmitry/eth2-balance-service/shared/beacon"
+	sharedTypes "github.com/SergeevDmitry/eth2-balance-service/shared/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
-	"github.com/stafiprotocol/eth2-balance-service/shared"
-	"github.com/stafiprotocol/eth2-balance-service/shared/beacon"
-	sharedTypes "github.com/stafiprotocol/eth2-balance-service/shared/types"
 	"github.com/stratisproject/prysm-stratis/beacon-chain/core/signing"
 	types "github.com/stratisproject/prysm-stratis/consensus-types/primitives"
 	"github.com/stratisproject/prysm-stratis/crypto/bls"
