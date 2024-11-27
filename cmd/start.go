@@ -9,12 +9,12 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/pkg/errors"
-	"github.com/prysmaticlabs/prysm/v3/io/prompt"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 	"github.com/stafiprotocol/eth2-balance-service/shared"
 	"github.com/stafiprotocol/eth2-balance-service/shared/beacon"
 	"github.com/stafiprotocol/eth2-balance-service/shared/types"
+	"github.com/stratisproject/prysm-stratis/io/prompt"
 )
 
 const EnvPassword = "KEYSTORE_PASSWORD"

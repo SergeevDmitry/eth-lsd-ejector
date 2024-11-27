@@ -9,15 +9,15 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/pkg/errors"
-	"github.com/prysmaticlabs/prysm/v3/beacon-chain/core/signing"
-	types "github.com/prysmaticlabs/prysm/v3/consensus-types/primitives"
-	"github.com/prysmaticlabs/prysm/v3/crypto/bls"
-	"github.com/prysmaticlabs/prysm/v3/encoding/bytesutil"
-	ethpb "github.com/prysmaticlabs/prysm/v3/proto/prysm/v1alpha1"
 	"github.com/sirupsen/logrus"
 	"github.com/stafiprotocol/eth2-balance-service/shared"
 	"github.com/stafiprotocol/eth2-balance-service/shared/beacon"
 	sharedTypes "github.com/stafiprotocol/eth2-balance-service/shared/types"
+	"github.com/stratisproject/prysm-stratis/beacon-chain/core/signing"
+	types "github.com/stratisproject/prysm-stratis/consensus-types/primitives"
+	"github.com/stratisproject/prysm-stratis/crypto/bls"
+	"github.com/stratisproject/prysm-stratis/encoding/bytesutil"
+	ethpb "github.com/stratisproject/prysm-stratis/proto/prysm/v1alpha1"
 )
 
 var (

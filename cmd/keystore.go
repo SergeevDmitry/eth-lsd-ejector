@@ -12,8 +12,8 @@ import (
 	"strings"
 
 	"github.com/pkg/errors"
-	"github.com/prysmaticlabs/prysm/v3/crypto/bls"
-	"github.com/prysmaticlabs/prysm/v3/io/file"
+	"github.com/stratisproject/prysm-stratis/crypto/bls"
+	"github.com/stratisproject/prysm-stratis/io/file"
 	keystorev4 "github.com/wealdtech/go-eth2-wallet-encryptor-keystorev4"
 )
 
