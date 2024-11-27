@@ -5,7 +5,7 @@ go 1.21.4
 toolchain go1.22.3
 
 require (
-	github.com/SergeevDmitry/eth2-balance-service v0.0.0-20241127173503-fa633b50a71b
+	github.com/SergeevDmitry/eth2-balance-service v0.0.0-20241127174228-9123a08c2d40
 	github.com/ethereum/go-ethereum v1.13.5
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.0

@@ -79,6 +79,8 @@ github.com/SergeevDmitry/eth2-balance-service v0.0.0-20241127114940-d344bf5f6c24
 github.com/SergeevDmitry/eth2-balance-service v0.0.0-20241127114940-d344bf5f6c24/go.mod h1:6jpBk62BbbNXnNrU0oSqZWRLXrpTwOT27niyvVqGviE=
 github.com/SergeevDmitry/eth2-balance-service v0.0.0-20241127173503-fa633b50a71b h1:0su1XV8xtMF6DwZ6dj8Egdm5dBzofI9tmspw4j7C1NE=
 github.com/SergeevDmitry/eth2-balance-service v0.0.0-20241127173503-fa633b50a71b/go.mod h1:6jpBk62BbbNXnNrU0oSqZWRLXrpTwOT27niyvVqGviE=
+github.com/SergeevDmitry/eth2-balance-service v0.0.0-20241127174228-9123a08c2d40 h1:W0jic92P+ex0/hLM/fdRll8FaFaR4sN6X/U6sSYDPqw=
+github.com/SergeevDmitry/eth2-balance-service v0.0.0-20241127174228-9123a08c2d40/go.mod h1:6jpBk62BbbNXnNrU0oSqZWRLXrpTwOT27niyvVqGviE=
 github.com/Shopify/goreferrer v0.0.0-20181106222321-ec9c9a553398/go.mod h1:a1uqRtAwp2Xwc6WNPJEufxJ7fx3npB4UV/JOLmbu5I0=
 github.com/Shopify/goreferrer v0.0.0-20220729165902-8cddb4f5de06/go.mod h1:7erjKLwalezA0k99cWs5L11HWOAPNjdUZ6RxH1BXbbM=
 github.com/StackExchange/wmi v0.0.0-20180116203802-5d049714c4a6/go.mod h1:3eOhrUMpNV+6aFIbp5/iudMxNCF27Vw2OZgy4xEx0Fg=
