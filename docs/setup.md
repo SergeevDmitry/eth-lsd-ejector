@@ -54,9 +54,6 @@ Update and upgrade existing packages, then install the required dependencies:
 3. **Reload your shell**:
 
         source ~/.bashrc
-    or
-
-        source ~/.zshrc
 
 4. **Install Python 3.10** using pyenv and set it globally:
 
@@ -74,8 +71,6 @@ Download, extract, and configure Go:
     tar -C /usr/local -xzf go1.23.5.linux-amd64.tar.gz
     export PATH=$PATH:/usr/local/go/bin
     source ~/.bashrc
-
-> **Note**: Ensure that `/usr/local/go/bin` is added to your `PATH` in your shell configuration file (e.g., `~/.bashrc` or `~/.zshrc`).
 
 ---
 
