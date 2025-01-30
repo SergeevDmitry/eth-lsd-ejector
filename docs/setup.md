@@ -99,6 +99,7 @@ Download, extract, and configure Go:
 
     cd ../eth-lsd-relay/
     make build-linux
+    cp ./build/eth-lsd-relay /usr/local/bin
     cd ..
 
 ---
