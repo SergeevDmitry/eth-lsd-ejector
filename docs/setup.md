@@ -141,10 +141,10 @@ Create an Ejector configuration under Supervisor by editing (or creating) `/etc/
 Paste in the following snippet (update `<keystore_password>` to match the password used to create your validator keys):
 
     [program:eth-lsd-ejector]
-    command=eth-lsd-ejector start \
-      --execution_endpoint=http://localhost:8545 \
-      --consensus_endpoint=http://localhost:3500 \
-      --keys_dir=/root/eth2.0-deposit-cli/validator_keys \
+    command=eth-lsd-ejector start
+      --execution_endpoint=http://localhost:8545
+      --consensus_endpoint=http://localhost:3500
+      --keys_dir=/root/eth2.0-deposit-cli/validator_keys
       --withdraw_address=0x07867c078F7a86120103A373c656Dbabd1EA58Ee
     environment=KEYSTORE_PASSWORD=<keystore_password>
     redirect_stderr=true
