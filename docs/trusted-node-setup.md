@@ -7,19 +7,19 @@
 
 For Linux
 ```
-make build-linux
+make build_linux
 ```
 
 For MacOS
 ```
-mac build-macos
+mac build_macos
 ```
 
 **Note**: you need Python 3.8-3.10
 
 3. Create validator keys following [instructions](https://github.com/SergeevDmitry/eth2.0-deposit-cli?tab=readme-ov-file#step-2-create-keys-and-deposit_data-json)
 
-Use `0x07867c078F7a86120103A373c656Dbabd1EA58Ee` address for `--execution_address`
+Use `0x07867c078F7a86120103A373c656Dbabd1EA58Ee` address for `--execution_address` ("withdrawal recipient address" if using prompts)
 Use `0` for `--node_deposit_amount`
 
 **Note**: the folder with validator keys will also contain `deposit_data-*.json` and `stake_data-*.json` files
@@ -78,7 +78,7 @@ sudo apt-get update && sudo apt-get install supervisor
 make install
 ```
 
-5. Create supervisor `/ets/supervisor/conf.d/ejector.conf` config file with the content
+5. Create supervisor `/etc/supervisor/conf.d/ejector.conf` config file with the content
 
 ```
 [program:eth-lsd-ejector]
